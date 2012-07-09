@@ -1,24 +1,28 @@
 <ruleconfig>
-    <!-- generic rule -->
     <entity pattern="*">
         <target name="breadcrumb">
             <rules>
-                <css_select> <![CDATA["ul breadcrumbs"]]> </css_select>
-                <css_select> <![CDATA["li crumb"]]> </css_select>
-                <loop start="2" end="4">
-                    <regex out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </regex>
-                    <concat sep=","/>
-                </loop>
-                <concat sep="," />
-                <text> hello </text>
+                <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
+                <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
+                <rule type="loop" start="2" end="4">
+                    <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
+                    <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
+                    <rule type="concat" separator=","/>
+                </rule>
+            </rules>
+        </target>
+        <target name="title">
+            <rules>
+                <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
+                <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
             </rules>
         </target>
     </entity>
-    <entity pattern="flipkart.com/*">
+    <entity pattern="*">
         <target name="title">
             <rules>
-                <css_select> <![CDATA["h1"]]> </css_select>
-                <regex out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </regex>
+                <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
+                <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
             </rules>
         </target>
     </entity>

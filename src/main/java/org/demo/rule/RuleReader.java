@@ -1,8 +1,9 @@
 package org.demo.rule;
 
-import org.demo.rule.generated.Ruleconfig;
+import org.demo.rule.generated.RuleconfigType;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
@@ -21,12 +22,11 @@ public class RuleReader {
         unmarshaller = jaxbc.createUnmarshaller();
     }
 
-    public Ruleconfig read() throws Exception {
+    public RuleconfigType read() throws Exception {
         if(unmarshaller == null){
             init();
         }
-        Ruleconfig obj = (Ruleconfig) unmarshaller.unmarshal(new File(ruleFile));
-
+        RuleconfigType obj = (RuleconfigType) ((JAXBElement)unmarshaller.unmarshal(new File(ruleFile))).getValue();
         return obj;
     }
 }
