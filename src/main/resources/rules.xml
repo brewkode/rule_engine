@@ -1,0 +1,25 @@
+<ruleconfig>
+    <!-- generic rule -->
+    <entity pattern="*">
+        <target name="breadcrumb">
+            <rules>
+                <css_select> <![CDATA["ul breadcrumbs"]]> </css_select>
+                <css_select> <![CDATA["li crumb"]]> </css_select>
+                <loop start="2" end="4">
+                    <regex out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </regex>
+                    <concat sep=","/>
+                </loop>
+                <concat sep="," />
+                <text> hello </text>
+            </rules>
+        </target>
+    </entity>
+    <entity pattern="flipkart.com/*">
+        <target name="title">
+            <rules>
+                <css_select> <![CDATA["h1"]]> </css_select>
+                <regex out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </regex>
+            </rules>
+        </target>
+    </entity>
+</ruleconfig>
