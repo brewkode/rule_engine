@@ -31,7 +31,7 @@ public class Entity {
     }
 
     public void addRules(Rule rule, String targetAttribute){
-        if(ruleMap != null){
+        if(ruleMap == null){
             ruleMap = new HashMap<String, List<Rule>>();
         }
         if(ruleMap.get(targetAttribute) != null){

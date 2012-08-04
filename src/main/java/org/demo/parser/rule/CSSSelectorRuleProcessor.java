@@ -24,6 +24,6 @@ public class CSSSelectorRuleProcessor implements IRuleProcessor {
                 }
             }
         }
-        return (elements != null && elements.size() > 0 ? elements.text() : null);
+        return (elements != null && elements.size() > 0 ? elements.text().trim() : null);
     }
 }

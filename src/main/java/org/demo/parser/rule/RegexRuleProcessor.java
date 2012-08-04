@@ -15,7 +15,7 @@ public class RegexRuleProcessor implements IRuleProcessor {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(inputContent);
         if(matcher.find()){
-            return matcher.group(outGroup);
+            return matcher.group(outGroup).trim();
         }
         return null;
     }
