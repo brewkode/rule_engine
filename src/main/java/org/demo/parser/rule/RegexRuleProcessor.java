@@ -3,7 +3,7 @@ package org.demo.parser.rule;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.demo.parser.Helper.validateRegexRuleArgs;
+import static org.demo.parser.util.Helper.validateRegexRuleArgs;
 
 public class RegexRuleProcessor implements IRuleProcessor {
     @Override

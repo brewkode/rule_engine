@@ -2,7 +2,7 @@ package org.demo.parser.engine;
 
 import org.demo.parser.rule.CSSSelectorRuleProcessor;
 import org.demo.parser.rule.RegexRuleProcessor;
-import org.demo.parser.rule.RuleStore;
+import org.demo.parser.rule.store.RuleStore;
 import org.demo.parser.rule.model.Entity;
 import org.demo.parser.rule.model.Rule;
 import org.junit.Before;

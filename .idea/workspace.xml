@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4feab54b-8484-4011-b6e4-c22b3d495bef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/MatchMaker.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/Helper.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/util/Helper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleStore.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/store/RuleStore.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java" />
     </list>
     <ignored path="rule_engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,32 +94,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RuleEngine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuleEngineTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.67360353">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RuleStore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleStore.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/store/RuleStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
+            <state line="25" column="51" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java">
+      <file leaf-file-name="PrefixTree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/util/PrefixTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="65" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+            <state line="8" column="29" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,10 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java">
+      <file leaf-file-name="PrefixTreeTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/util/PrefixTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="92" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+            <state line="18" column="42" selection-start="412" selection-end="412" vertical-scroll-proportion="0.29572836">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeNode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/util/TreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="35" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,22 +153,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/rules.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRuleProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/MatchMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/ExactMatchMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/PrefixMatchMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/store/RuleStore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/store/Member.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/util/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/util/PrefixTree.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/util/PrefixTreeTest.java" />
       </list>
     </option>
   </component>
@@ -257,6 +247,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,37 +414,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,35 +437,12 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.RuleEngineTest.shouldExecuteRule">
-    <configuration default="false" name="CSSSelectorRuleTest.shouldThrowAnExceptionDuetoInvalidArgs" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.demo.parser.rule.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="rule_engine" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.demo.parser.rule" />
-      <option name="MAIN_CLASS_NAME" value="org.demo.parser.rule.CSSSelectorRuleTest" />
-      <option name="METHOD_NAME" value="shouldThrowAnExceptionDuetoInvalidArgs" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.demo.parser.util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PrefixTreeTest.shouldCreatePrefixTree">
     <configuration default="false" name="RuleFactoryTest.shouldInstantiateFactoryWithoutErrors" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -573,6 +540,40 @@
       <option name="PACKAGE_NAME" value="org.demo.parser.engine" />
       <option name="MAIN_CLASS_NAME" value="org.demo.parser.engine.RuleEngineTest" />
       <option name="METHOD_NAME" value="shouldExecuteRule" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PrefixTreeTest.shouldCreatePrefixTree" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.demo.parser.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rule_engine" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.demo.parser.util" />
+      <option name="MAIN_CLASS_NAME" value="org.demo.parser.util.PrefixTreeTest" />
+      <option name="METHOD_NAME" value="shouldCreatePrefixTree" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -730,11 +731,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CSSSelectorRuleTest.shouldThrowAnExceptionDuetoInvalidArgs" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryWithoutErrors" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryWithErrors" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryAlbeitWithErrors" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RuleEngineTest.shouldExecuteRule" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryWithoutErrors" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryWithErrors" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RuleFactoryTest.shouldInstantiateFactoryAlbeitWithErrors" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RuleEngineTest.shouldExecuteRule" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PrefixTreeTest.shouldCreatePrefixTree" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -834,41 +835,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleconfigType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.33296824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RulesType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.55859804">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/ObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.33296824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/EntityType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.5257393">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.5914567">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/rules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="21" selection-start="110" selection-end="114" vertical-scroll-proportion="0.065717414">
@@ -901,27 +867,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="92" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -959,6 +907,65 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.67360353">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/RuleReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.065717414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="27" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.69003284">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/store/RuleStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="51" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/util/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="35" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/util/PrefixTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/softwares/jdk1.7.0/src.zip!/com/sun/org/apache/xml/internal/utils/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.16429354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/util/PrefixTreeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="42" selection-start="412" selection-end="412" vertical-scroll-proportion="0.29572836">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,4 +1,4 @@
-package org.demo.parser.rule;
+package org.demo.parser.rule.store;
 
 import org.demo.parser.rule.model.Entity;
 
@@ -18,16 +18,20 @@ public class RuleStore {
     }
 
     public Entity lookupStore(String urlPattern, boolean exactMatch){
-
         for(Map.Entry<String, Entity> entry : entityStore.entrySet()){
+            boolean isMatching = false;
             if(exactMatch){
-                boolean isMatching = entry.getKey().equals(urlPattern);
-                if(isMatching){
-                    return entry.getValue();
-                }
+                isMatching = entry.getKey().equals(urlPattern);
             }else{
-                // NO-OP
+                // TODO
+                // This needs to change to find the nearest pattern matching the 'urlPattern'
+                // if not,it should fall back to the generic entity matcher "*"
+                isMatching = entry.getKey().startsWith(urlPattern);
             }
+            if(isMatching){
+                return entry.getValue();
+            }
+
         }
         return null;
     }

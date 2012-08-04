@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import static org.demo.parser.Helper.validateCSSSelectorRuleArgs;
+import static org.demo.parser.util.Helper.validateCSSSelectorRuleArgs;
 
 public class CSSSelectorRuleProcessor implements IRuleProcessor {
 

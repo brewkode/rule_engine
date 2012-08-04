@@ -1,4 +1,4 @@
-package org.demo.parser;
+package org.demo.parser.util;
 
 public final class Helper {
     public static void validateRegexRuleArgs(String[] args) throws Exception {
