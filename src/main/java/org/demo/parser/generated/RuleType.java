@@ -6,7 +6,7 @@
 //
 
 
-package org.demo.rule.generated;
+package org.demo.parser.generated;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="rule" type="{}ruleType"/>
+ *         &lt;element name="parser" type="{}ruleType"/>
  *       &lt;/sequence>
  *       &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="out_group" type="{http://www.w3.org/2001/XMLSchema}int" />
@@ -50,7 +50,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class RuleType {
 
-    @XmlElementRef(name = "rule", type = JAXBElement.class)
+    @XmlElementRef(name = "parser", type = JAXBElement.class)
     @XmlMixed
     protected List<Serializable> content;
     @XmlAttribute(name = "type")

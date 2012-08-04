@@ -1,6 +1,6 @@
-package org.demo.rule;
+package org.demo.parser;
 
-import org.demo.rule.generated.RuleconfigType;
+import org.demo.parser.generated.RuleconfigType;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -9,7 +9,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
 public class RuleReader {
-    String packageName = "org.demo.rule.generated";
+    String packageName = "org.demo.parser.generated";
     String ruleFile;
     Unmarshaller unmarshaller;
 

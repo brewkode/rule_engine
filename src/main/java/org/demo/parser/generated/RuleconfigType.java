@@ -6,7 +6,7 @@
 //
 
 
-package org.demo.rule.generated;
+package org.demo.parser.generated;
 
 import java.util.ArrayList;
 import java.util.List;

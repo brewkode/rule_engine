@@ -6,7 +6,7 @@
 //
 
 
-package org.demo.rule.generated;
+package org.demo.parser.generated;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="rule" type="{}ruleType" maxOccurs="unbounded"/>
+ *         &lt;element name="parser" type="{}ruleType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -45,13 +45,13 @@ public class RulesType {
     protected List<RuleType> rule;
 
     /**
-     * Gets the value of the rule property.
+     * Gets the value of the parser property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rule property.
+     * This is why there is not a <CODE>set</CODE> method for the parser property.
      * 
      * <p>
      * For example, to add a new item, do as follows:

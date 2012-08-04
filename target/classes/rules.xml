@@ -4,11 +4,7 @@
             <rules>
                 <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
                 <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
-                <rule type="loop" start="2" end="4">
-                    <rule type="regex" out_group="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
-                    <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
-                    <rule type="concat" separator=","/>
-                </rule>
+                <rule type="javascript"> <![CDATA[some_javascript_here]]> </rule>
             </rules>
         </target>
         <target name="title">
