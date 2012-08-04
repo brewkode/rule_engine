@@ -6,7 +6,7 @@ import org.jsoup.select.Elements;
 
 import static org.demo.parser.Helper.validateCSSSelectorRuleArgs;
 
-public class CSSSelectorRule implements IRule{
+public class CSSSelectorRuleProcessor implements IRuleProcessor {
 
     @Override
     public String fire(String inputContent, String[] args) throws Exception {

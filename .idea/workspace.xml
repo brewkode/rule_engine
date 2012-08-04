@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4feab54b-8484-4011-b6e4-c22b3d495bef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/RuleReader.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/RuleReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/engine/RuleEngine.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/EntityType.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/EntityType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/ObjectFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/RuleType.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/RuleconfigType.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleconfigType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/RulesType.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RulesType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/rule/generated/TargetType.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/TargetType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/RuleReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/engine/RuleEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/ObjectFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity$Target$Rules$Loop$Concat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity$Target$Rules$Loop$Regex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity$Target$Rules$Loop.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity$Target$Rules.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity$Target.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig$Entity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/demo/rule/generated/Ruleconfig.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRuleProcessor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRule.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rule_engine.iml" afterPath="$PROJECT_DIR$/rule_engine.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rules.xml" afterPath="$PROJECT_DIR$/src/main/resources/rules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/CSSSelectorRuleTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/CSSSelectorRuleTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" />
     </list>
     <ignored path="rule_engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,10 +79,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegexRule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRule.java">
+      <file leaf-file-name="RuleEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+            <state line="20" column="56" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleFactory.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RuleFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="27" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.69003284">
+            <state line="44" column="65" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,35 +101,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleFactoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java">
+      <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="40" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+            <state line="9" column="23" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#395#411#0" expanded="true" />
-                <element signature="e#996#1012#0" expanded="true" />
+                <element signature="e#947#953#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSSSelectorRule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java">
+      <file leaf-file-name="Rule.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="49" selection-start="838" selection-end="838" vertical-scroll-proportion="0.0">
+            <state line="45" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.73932093">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="62" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,16 +139,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/rules.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRule.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/Helper.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/CSSSelectorRuleTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rules.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRuleProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/MatchMaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java" />
       </list>
     </option>
   </component>
@@ -277,6 +278,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -301,6 +306,100 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rule_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +726,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -646,7 +745,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6709265" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6709265" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -710,61 +809,63 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rules.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="81" selection-start="346" selection-end="346" vertical-scroll-proportion="0.14900662">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/RuleReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="0.09933775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/softwares/jdk1.7.0/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="443" column="22" selection-start="16139" selection-end="16139" vertical-scroll-proportion="-0.15991238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/softwares/jdk1.7.0/src.zip!/java/lang/CharSequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="17" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.4600219">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.6.2/jsoup-1.6.2-sources.jar!/org/jsoup/Jsoup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="451" selection-end="451" vertical-scroll-proportion="0.14786418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="0.39033458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="74" selection-end="74" vertical-scroll-proportion="0.08364312">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="51" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
+        <state line="10" column="21" selection-start="310" selection-end="310" vertical-scroll-proportion="0.16429354">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="49" selection-start="838" selection-end="838" vertical-scroll-proportion="0.42716318">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="62" selection-start="567" selection-end="567" vertical-scroll-proportion="0.2464403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleconfigType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="13" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.33296824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RulesType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="23" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.55859804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.33296824">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/EntityType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="13" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.5257393">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="13" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.5914567">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -777,59 +878,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/softwares/jdk1.7.0/src.zip!/java/util/regex/Matcher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rules.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="19" selection-start="3796" selection-end="3796" vertical-scroll-proportion="-7.208105">
+        <state line="4" column="21" selection-start="110" selection-end="114" vertical-scroll-proportion="0.065717414">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="62" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="838" selection-end="838" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="605" selection-end="605" vertical-scroll-proportion="0.21358159">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#395#411#0" expanded="true" />
-            <element signature="e#996#1012#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.69003284">
+        <state line="44" column="65" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#947#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRuleProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="83" selection-end="83" vertical-scroll-proportion="0.04928806">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="56" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/engine/MatchMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="165" selection-end="165" vertical-scroll-proportion="0.11500548">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.73932093">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

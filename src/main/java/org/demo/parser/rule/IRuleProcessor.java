@@ -1,5 +1,5 @@
 package org.demo.parser.rule;
 
-public interface IRule {
+public interface IRuleProcessor {
     public String fire(String inputContent, String[] args) throws Exception;
 }

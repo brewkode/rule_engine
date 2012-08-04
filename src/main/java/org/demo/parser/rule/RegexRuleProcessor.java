@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 import static org.demo.parser.Helper.validateRegexRuleArgs;
 
-public class RegexRule implements IRule{
+public class RegexRuleProcessor implements IRuleProcessor {
     @Override
     public String fire(String inputContent, String[] args) throws Exception{
         validateRegexRuleArgs(args);

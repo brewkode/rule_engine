@@ -14,7 +14,7 @@
             </rules>
         </target>
     </entity>
-    <entity pattern="*">
+    <entity pattern="flipkart.com/*">
         <target name="title">
             <rules>
                 <rule type="css_select"> <![CDATA["ul breadcrumbs"]]> </rule>
