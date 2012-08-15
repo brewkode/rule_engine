@@ -1,26 +1,34 @@
 package org.demo.parser.util;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class PrefixTree {
-    Set<TreeNode> startNodes;
+    Map<Character, TreeNode> startNodes;
 
     public PrefixTree(int n){
-        startNodes = new HashSet<TreeNode>(n);
+        startNodes = new TreeMap<Character, TreeNode>();
     }
 
     public void addEntry(String key, Object data){
         int len = key.length();
-        TreeNode current = new TreeNode(key.charAt(0));
-        if(!startNodes.contains(current)){
-            startNodes.add(current);
+        char startChar = key.charAt(0);
+        TreeNode current = null;
+        if(!startNodes.containsKey(startChar)){
+            current = new TreeNode(startChar);
+            startNodes.put(startChar, current);
+        }else{
+            current = startNodes.get(startChar);
         }
 
         for(int i=1; i<len; ++i){
-            TreeNode temp = new TreeNode(key.charAt(i));
-            if(!current.hasChild(temp)){
+            char curChar = key.charAt(i);
+            TreeNode temp = null;
+            if(!current.hasChild(curChar)){
+                temp = new TreeNode(curChar);
                 current.addChild(temp);
+            }else{
+                temp = current.getChild(curChar);
             }
             current = temp;
         }
@@ -28,16 +36,15 @@ public class PrefixTree {
     }
 
     public boolean exist(String key){
-        TreeNode current = new TreeNode(key.charAt(0));
-        if(!startNodes.contains(current)){
+        if(!startNodes.containsKey(key.charAt(0))){
             return false;
         }
+        TreeNode current = startNodes.get(key.charAt(0));
         for(int i=1; i< key.length(); ++i){
-            TreeNode temp = new TreeNode(key.charAt(i));
-            if(!current.hasChild(temp)){
+            current = current.getChild(key.charAt(i));
+            if(current == null){
                 return false;
             }
-            current = temp;
         }
         return true;
     }

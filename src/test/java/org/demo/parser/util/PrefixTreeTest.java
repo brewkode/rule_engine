@@ -14,5 +14,7 @@ public class PrefixTreeTest {
         tree.addEntry("tested", "tested");
 
         assertTrue(tree.exist("test"));
+        assertTrue(tree.exist("text"));
+        assertTrue(tree.exist("tested"));
     }
 }

@@ -1,25 +1,25 @@
 package org.demo.parser.util;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class TreeNode {
     private char key;
-    private boolean hasAssociatedData;
+    private boolean isDataNode;
     private Object data = null;
-    private Set<TreeNode> nextList;
+    private Map<Character, TreeNode> nextList;
 
     public TreeNode(char key){
         this.key = key;
-        hasAssociatedData = false;
-        nextList = new HashSet<TreeNode>(10);
+        isDataNode = false;
+        nextList = new TreeMap<Character, TreeNode>();
     }
 
     public TreeNode(char key, Object data){
         this.key = key;
         this.data = data;
-        hasAssociatedData = true;
-        nextList = new HashSet<TreeNode>(10);
+        isDataNode = true;
+        nextList = new TreeMap<Character, TreeNode>();
     }
 
     @Override
@@ -47,12 +47,12 @@ public class TreeNode {
         this.key = key;
     }
 
-    public boolean isHasAssociatedData() {
-        return hasAssociatedData;
+    public boolean isDataNode() {
+        return isDataNode;
     }
 
-    public void setHasAssociatedData(boolean hasAssociatedData) {
-        this.hasAssociatedData = hasAssociatedData;
+    public void setDataNode(boolean dataNode) {
+        this.isDataNode = dataNode;
     }
 
     public Object getData() {
@@ -61,14 +61,22 @@ public class TreeNode {
 
     public void setData(Object data) {
         this.data = data;
-        setHasAssociatedData(true);
+        setDataNode(true);
     }
 
     public void addChild(TreeNode node){
-        nextList.add(node);
+        nextList.put(node.getKey(), node);
     }
 
     public boolean hasChild(TreeNode node){
-        return nextList.contains(node);
+        return nextList.containsKey(node.getKey());
+    }
+
+    public boolean hasChild(Character key){
+        return nextList.containsKey(key);
+    }
+
+    public TreeNode getChild(Character key){
+        return nextList.get(key);
     }
 }
