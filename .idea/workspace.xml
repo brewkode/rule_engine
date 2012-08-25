@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4feab54b-8484-4011-b6e4-c22b3d495bef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/RuleReader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/EntityType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RuleconfigType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/RulesType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/TargetType.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/engine/RuleEngine.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/engine/RuleEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRuleProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/CSSSelectorRule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRuleProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/IRule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRuleProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RegexRule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Rule.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/RuleInstance.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/engine/RuleEngineTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/engine/RuleEngineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rule_engine.iml" afterPath="$PROJECT_DIR$/rule_engine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/generated/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/RuleFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/org/demo/parser/rule/model/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rdl.xsd" afterPath="$PROJECT_DIR$/src/main/resources/rdl.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rule.xml" afterPath="$PROJECT_DIR$/src/main/resources/rule.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rules.xml" afterPath="$PROJECT_DIR$/src/main/resources/rules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/CSSSelectorRuleTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/CSSSelectorRuleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RegexRuleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/demo/parser/rule/RuleFactoryTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/rule.xml" afterPath="" />
     </list>
     <ignored path="rule_engine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -252,96 +228,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -373,36 +259,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rule_engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -837,13 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/util/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="12" selection-start="465" selection-end="594" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/reader/IRuleReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="44" selection-start="113" selection-end="113" vertical-scroll-proportion="0.05350773">
@@ -959,10 +808,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/demo/parser/rule/engine/RuleEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="40" selection-start="2752" selection-end="2752" vertical-scroll-proportion="1.3020214">
+        <state line="49" column="13" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.8739596">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="29" selection-start="675" selection-end="675" vertical-scroll-proportion="0.32104638">
+          <folding />
         </state>
       </provider>
     </entry>

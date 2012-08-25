@@ -2,20 +2,18 @@
     <entity pattern="*">
         <target name="breadcrumb">
             <rules>
-                <rule type="regex" group_num="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
                 <rule type="css"> <![CDATA["ul breadcrumbs"]]> </rule>
-                <rule type="javascript"> <![CDATA[some_javascript_here]]> </rule>
+                <rule type="regex" group_num="2"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
             </rules>
         </target>
         <target name="title">
             <rules>
-                <rule type="css"> <![CDATA["ul breadcrumbs"]]> </rule>
                 <rule type="regex" group_num="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
             </rules>
         </target>
     </entity>
     <entity pattern="flipkart.com/*">
-        <target name="title">
+        <target name="breadcrumb">
             <rules>
                 <rule type="css"> <![CDATA["ul breadcrumbs"]]> </rule>
                 <rule type="regex" group_num="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
