@@ -3,8 +3,8 @@
     <entity pattern="*">
         <target name="breadcrumb">
             <rules>
-                <rule type='css_select'> <![CDATA["ul breadcrumbs"]]> </rule>
-                <rule type='css_select'> <![CDATA["li crumb"]]> </rule>
+                <rule type='css'> <![CDATA["ul breadcrumbs"]]> </rule>
+                <rule type='css'> <![CDATA["li crumb"]]> </rule>
                 <rule type='javascript'> <![CDATA[some_javascript_here]]> </rule>
             </rules>
         </target>
@@ -12,7 +12,7 @@
     <entity pattern="flipkart.com/*">
         <target name="title">
             <rules>
-                <rule type='css_select'> <![CDATA["ul breadcrumbs"]]> </rule>
+                <rule type='css'> <![CDATA["ul breadcrumbs"]]> </rule>
                 <rule type='regex'> <![CDATA[some_regex_here]]> </rule>
             </rules>
         </target>

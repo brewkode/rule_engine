@@ -1,5 +1,7 @@
 package org.demo.parser.rule.model;
 
+import org.demo.parser.rule.IRule;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,11 +9,11 @@ import java.util.Map;
 
 public class Entity {
     String pattern;
-    Map<String, List<Rule>> ruleMap;
+    Map<String, List<IRule>> ruleMap;
 
 
     public Entity(){
-        ruleMap = new HashMap<String, List<Rule>>();
+        ruleMap = new HashMap<String, List<IRule>>();
     }
 
     public String getPattern() {
@@ -22,22 +24,22 @@ public class Entity {
         this.pattern = pattern;
     }
 
-    public Map<String, List<Rule>> getRuleMap() {
+    public Map<String, List<IRule>> getRuleMap() {
         return ruleMap;
     }
 
-    public void setRuleMap(Map<String, List<Rule>> ruleMap) {
+    public void setRuleMap(Map<String, List<IRule>> ruleMap) {
         this.ruleMap = ruleMap;
     }
 
-    public void addRules(Rule rule, String targetAttribute){
+    public void addRules(IRule rule, String targetAttribute){
         if(ruleMap == null){
-            ruleMap = new HashMap<String, List<Rule>>();
+            ruleMap = new HashMap<String, List<IRule>>();
         }
         if(ruleMap.get(targetAttribute) != null){
             ruleMap.get(targetAttribute).add(rule);
         }else{
-            List<Rule> rules = new ArrayList<Rule>();
+            List<IRule> rules = new ArrayList<IRule>();
             rules.add(rule);
             ruleMap.put(targetAttribute, rules);
         }

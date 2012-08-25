@@ -3,12 +3,12 @@ package org.demo.parser.rule.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rule {
+public class RuleInstance {
     String type;
     List<String> args;
     String[] argsArray;
 
-    public Rule(){
+    public RuleInstance(){
         args = new ArrayList<String>();
     }
 

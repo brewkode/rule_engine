@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RuleFactory {
-    private Map<String, IRuleProcessor> ruleObjectMap;
+    private Map<String, IRule> ruleObjectMap;
     private byte initialized = 0;
 
     public RuleFactory(Map<String, String> configs) {
-        ruleObjectMap = new HashMap<String, IRuleProcessor>();
+        ruleObjectMap = new HashMap<String, IRule>();
         load(configs);
     }
 
@@ -24,12 +24,12 @@ public class RuleFactory {
             try{
                 Class klass = Class.forName(fqcn);
                 Object rule = klass.newInstance();
-                if(rule instanceof IRuleProcessor){
-                    ruleObjectMap.put(type, (IRuleProcessor) rule);
+                if(rule instanceof IRule){
+                    ruleObjectMap.put(type, (IRule) rule);
                     atleastOne = true;
                 }else{
                     initialized = 1;
-                    throw new Exception(rule.getClass()+" does not implement "+IRuleProcessor.class.getCanonicalName()+" interface");
+                    throw new Exception(rule.getClass()+" does not implement "+IRule.class.getCanonicalName()+" interface");
                 }
             }catch(Exception e){
                 System.out.println("Error occurred => "+e.getMessage());
@@ -53,7 +53,7 @@ public class RuleFactory {
         return initialized;
     }
 
-    public IRuleProcessor getRuleInstance(String ruleType) throws Exception{
+    public IRule getRuleInstance(String ruleType) throws Exception{
         if(initialized == 0){
             throw new Exception("Rule factory not initialized yet");
         }

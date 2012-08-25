@@ -15,7 +15,7 @@ public class CSSSelectorRuleTest {
 
     @Test
     public void shouldFireCSSSelectorRule() throws Exception {
-        IRuleProcessor rule = new CSSSelectorRuleProcessor();
+        IRule rule = new CSSSelectorRule();
         String[] args = {"div#ix-notifier", "span.test"};
         String result = rule.fire("<html><body> <div id='ix-notifier'> div_text:  <span class='test'>test content</span></div></html>", args);
         assertThat(result, is("test content"));
@@ -24,7 +24,7 @@ public class CSSSelectorRuleTest {
 
     @Test
     public void shouldReturnNull(){
-        IRuleProcessor rule = new CSSSelectorRuleProcessor();
+        IRule rule = new CSSSelectorRule();
         String[] args = {"div#ix-notifier"};
         try {
             String result = rule.fire("<html>test string for test 123</html>", args);
@@ -37,7 +37,7 @@ public class CSSSelectorRuleTest {
 
     @Test
     public void shouldThrowAnExceptionDuetoInvalidArgs(){
-        IRuleProcessor rule = new CSSSelectorRuleProcessor();
+        IRule rule = new CSSSelectorRule();
         String[] args = {};
         try{
             rule.fire("test string for test 123", args);

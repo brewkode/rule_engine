@@ -14,22 +14,22 @@ public class RuleFactoryTest {
     @Test
     public void shouldInstantiateFactoryWithoutErrors() throws Exception {
         Map<String, String> map = new HashMap<String, String>(){{
-            put("css", CSSSelectorRuleProcessor.class.getCanonicalName());
-            put("regex", RegexRuleProcessor.class.getCanonicalName());
+            put("css", CSSSelectorRule.class.getCanonicalName());
+            put("regex", RegexRule.class.getCanonicalName());
         }};
 
         RuleFactory factory = new RuleFactory(map);
         assertNotNull(factory);
         assertThat(factory.getInitialized(), is((byte)2));
-        IRuleProcessor rule = factory.getRuleInstance("css");
-        assertThat(rule.getClass().getCanonicalName(), is(CSSSelectorRuleProcessor.class.getCanonicalName()));
+        IRule rule = factory.getRuleInstance("css");
+        assertThat(rule.getClass().getCanonicalName(), is(CSSSelectorRule.class.getCanonicalName()));
     }
 
 
     @Test
     public void shouldInstantiateFactoryAlbeitWithErrors() throws Exception {
         Map<String, String> map = new HashMap<String, String>(){{
-            put("css", CSSSelectorRuleProcessor.class.getCanonicalName());
+            put("css", CSSSelectorRule.class.getCanonicalName());
             put("regex", String.class.getCanonicalName());
         }};
 

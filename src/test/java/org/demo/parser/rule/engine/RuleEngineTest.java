@@ -1,14 +1,12 @@
-package org.demo.parser.engine;
+package org.demo.parser.rule.engine;
 
-import org.demo.parser.rule.CSSSelectorRuleProcessor;
-import org.demo.parser.rule.RegexRuleProcessor;
-import org.demo.parser.rule.store.RuleStore;
+import org.demo.parser.rule.CSSSelectorRule;
+import org.demo.parser.rule.RegexRule;
 import org.demo.parser.rule.model.Entity;
-import org.demo.parser.rule.model.Rule;
+import org.demo.parser.rule.store.RuleStore;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,22 +22,21 @@ public class RuleEngineTest {
         ruleStore = new RuleStore();
         createRules(ruleStore);
         map = new HashMap<String, String>(){{
-            put("css", CSSSelectorRuleProcessor.class.getCanonicalName());
-            put("regex", RegexRuleProcessor.class.getCanonicalName());
+            put("css", CSSSelectorRule.class.getCanonicalName());
+            put("regex", RegexRule.class.getCanonicalName());
         }};
     }
     
     private void createRules(RuleStore store){
         Entity entity = new Entity();
         entity.setPattern("http://www.flipkart.com/");
-        Rule rule = new Rule();
-        rule.setType("css");
-        rule.setArgs(new ArrayList<String>(){{ add("div#prdName"); add("span.test"); }});
-        entity.addRules(rule, "title");
-        rule = new Rule();
-        rule.setType("regex");
-        rule.setArgs(new ArrayList<String>(){{ add(".*:(.*)"); add("1"); }});
-        entity.addRules(rule, "title");
+        CSSSelectorRule cssrule1 = new CSSSelectorRule(); cssrule1.setCssSelector("div#prdName");
+        CSSSelectorRule cssrule2 = new CSSSelectorRule(); cssrule2.setCssSelector("span.test");
+        entity.addRules(cssrule1, "title");
+        entity.addRules(cssrule2, "title");
+        RegexRule regexRule = new RegexRule();
+        regexRule.setRegex(".*:(.*)"); regexRule.setGroupNumber(1);
+        entity.addRules(regexRule, "title");
         store.addEntity(entity);
 
 

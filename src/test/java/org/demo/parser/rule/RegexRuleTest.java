@@ -11,7 +11,7 @@ public class RegexRuleTest {
 
     @Test
     public void shouldFireRegexRule() throws Exception {
-        IRuleProcessor rule = new RegexRuleProcessor();
+        IRule rule = new RegexRule();
         String[] args = {"(([a-zA-Z\\s]+)([0-9]+))", "3"};
         String result = rule.fire("test string for test 123", args);
         assertThat(result, is("123"));
@@ -20,7 +20,7 @@ public class RegexRuleTest {
 
     @Test
     public void shouldThrowAnException(){
-        IRuleProcessor rule = new RegexRuleProcessor();
+        IRule rule = new RegexRule();
         String[] args = {"[a-zA-Z\\s]+([0-9]+)", "3"};
         try{
             rule.fire("test string for test 123", args);
@@ -33,7 +33,7 @@ public class RegexRuleTest {
 
     @Test
     public void shouldThrowAnExceptionDuetoInvalidArgs(){
-        IRuleProcessor rule = new RegexRuleProcessor();
+        IRule rule = new RegexRule();
         String[] args = {"[a-zA-Z\\s]+([0-9]+)"};
         try{
             String result = rule.fire("test string for test 123", args);
