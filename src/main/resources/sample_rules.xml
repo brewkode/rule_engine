@@ -1,22 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ruleconfig>
+    <!--
+        Entity is a way to group rules based on data sources
+        For all purposes now, we can consider data sources to be urls
+    -->
     <entity pattern="*">
-        <target name="breadcrumb">
-            <rules>
-                <rule type="css"> <![CDATA["ul breadcrumbs"]]> </rule>
-                <rule type="regex" group_num="2"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
-            </rules>
-        </target>
-        <target name="title">
+        <target name="sleeveStyle">
             <rules>
                 <rule type="regex" group_num="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
-            </rules>
-        </target>
-    </entity>
-    <entity pattern="flipkart.com/*">
-        <target name="breadcrumb">
-            <rules>
-                <rule type="css"> <![CDATA["ul breadcrumbs"]]> </rule>
-                <rule type="regex" group_num="1"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
+                <rule type="regex" group_num="1" exclude="true"> <![CDATA[ ([a-z]+)\s*([0-9]+).* ]]> </rule>
             </rules>
         </target>
     </entity>

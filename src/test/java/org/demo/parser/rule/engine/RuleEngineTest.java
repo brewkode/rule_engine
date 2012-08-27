@@ -2,7 +2,11 @@ package org.demo.parser.rule.engine;
 
 import org.demo.parser.rule.CSSSelectorRule;
 import org.demo.parser.rule.RegexRule;
+import org.demo.parser.rule.RuleFactory;
 import org.demo.parser.rule.model.Entity;
+import org.demo.parser.rule.model.RuleSet;
+import org.demo.parser.rule.reader.IRuleReader;
+import org.demo.parser.rule.reader.XMLRuleReader;
 import org.demo.parser.rule.store.RuleStore;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,14 +36,13 @@ public class RuleEngineTest {
         entity.setPattern("http://www.flipkart.com/");
         CSSSelectorRule cssrule1 = new CSSSelectorRule(); cssrule1.setCssSelector("div#prdName");
         CSSSelectorRule cssrule2 = new CSSSelectorRule(); cssrule2.setCssSelector("span.test");
-        entity.addRules(cssrule1, "title");
-        entity.addRules(cssrule2, "title");
+        RuleSet ruleSet = new RuleSet();
+        ruleSet.addRule(cssrule1); ruleSet.addRule(cssrule2);
         RegexRule regexRule = new RegexRule();
         regexRule.setRegex(".*:(.*)"); regexRule.setGroupNumber(1);
-        entity.addRules(regexRule, "title");
+        ruleSet.addRule(regexRule);
+        entity.addRules(ruleSet, "title");
         store.addEntity(entity);
-
-
     }
 
     @Test
@@ -48,4 +51,28 @@ public class RuleEngineTest {
         String title = engine.execute("http://www.flipkart.com/", "<html><body> <div id='prdName'> div_text:  <span class='test'>Product Name: Samsung Mobile</span></div></html>","title");
         assertThat(title, is("Samsung Mobile"));
     }
+
+    @Test
+    public void shouldExecuteSleeveStyleRule() throws Exception {
+        Map<String, String> map = new HashMap<String, String>(){{
+            put("css", CSSSelectorRule.class.getCanonicalName());
+            put("regex", RegexRule.class.getCanonicalName());
+        }};
+        String ruleDir = this.getClass().getResource("/").getPath();
+        RuleStore ruleStore = new RuleStore();
+        RuleFactory ruleFactory = new RuleFactory(map);
+        RuleEngine engine = new RuleEngine(ruleStore,  ruleFactory);
+        IRuleReader reader = new XMLRuleReader(ruleDir, ruleStore, ruleFactory);
+        reader.loadRules();
+        String title = "Calvin Klein Jacket, Long sleeve Flap Pocket Blazer";
+        String result = engine.execute("*", title, "sleeveStyle");
+        assertThat(result, is("Long sleeve"));
+        title = "Calvin Klein Jacket, sleeveless Flap Pocket Blazer";
+        result = engine.execute("*", title, "sleeveStyle");
+        assertThat(result, is("sleeveless"));
+
+
+    }
+
+
 }

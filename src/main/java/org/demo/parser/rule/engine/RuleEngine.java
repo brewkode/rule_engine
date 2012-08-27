@@ -4,6 +4,7 @@ package org.demo.parser.rule.engine;
 import org.demo.parser.rule.IRule;
 import org.demo.parser.rule.RuleFactory;
 import org.demo.parser.rule.model.Entity;
+import org.demo.parser.rule.model.RuleSet;
 import org.demo.parser.rule.store.RuleStore;
 
 import java.util.List;
@@ -28,19 +29,24 @@ public class RuleEngine{
         ruleFactory = new RuleFactory(map);
     }
 
+    public RuleEngine(RuleStore store, RuleFactory ruleFactory){
+        ruleStore = store;
+        this.ruleFactory = ruleFactory;
+    }
+
     public String execute(String entityIdentifierPattern, String inputContent) throws Exception {
         Entity matchingEntity = ruleStore.lookupStore(entityIdentifierPattern);
         if(matchingEntity == null){
             throw new Exception("No matching rule found for this entity identifier: "+entityIdentifierPattern);
         }
         String result = null;
-        Map<String, List<IRule>> ruleMap = matchingEntity.getRuleMap();
-        for(Map.Entry<String, List<IRule>> entry : ruleMap.entrySet()){
+        Map<String, List<RuleSet>> ruleMap = matchingEntity.getRuleMap();
+        for(Map.Entry<String, List<RuleSet>> entry : ruleMap.entrySet()){
             String targetAttribute = entry.getKey();
-            List<IRule> rules = entry.getValue();
-            result = processRule(rules, inputContent);
-            // TODO: update rule coverage counter based on 'result'
+            List<RuleSet> ruleSets = entry.getValue();
+            result = processRuleSets(ruleSets, inputContent);
             System.out.println("Target Attribute: "+targetAttribute+", Result: "+result);
+            // TODO: update rule hit/miss stat for this specific target
         }
         return result;
     }
@@ -52,17 +58,34 @@ public class RuleEngine{
             throw new Exception("No matching rule found for this entity identifier: "+entityIdentifierPattern);
         }
         String result = null;
-        Map<String, List<IRule>> ruleMap = matchingEntity.getRuleMap();
-        for(Map.Entry<String, List<IRule>> entry : ruleMap.entrySet()){
+        Map<String, List<RuleSet>> ruleMap = matchingEntity.getRuleMap();
+        for(Map.Entry<String, List<RuleSet>> entry : ruleMap.entrySet()){
             String attribute = entry.getKey();
 
             if(!attribute.equals(targetAttribute))
                 continue;
 
-            List<IRule> rules = entry.getValue();
+            List<RuleSet> ruleSets = entry.getValue();
+            result = processRuleSets(ruleSets, inputContent);
+            System.out.println("Target Attribute: "+targetAttribute+", Result: "+result);
+            // TODO: update rule hit/miss stat for this specific target
+        }
+        return result;
+    }
+    
+    
+    private String processRuleSets(List<RuleSet> ruleSets, String inputContent) throws Exception{
+        String result = null;
+        for(RuleSet ruleSet : ruleSets){
+            // iterate over all rule sets and apply one-by-one.
+            // exit if a rule succeeds
+            List<IRule> rules = ruleSet.getRules();
             result = processRule(rules, inputContent);
             // TODO: update rule coverage counter based on 'result'
-            System.out.println("Target Attribute: "+targetAttribute+", Result: "+result);
+            if(result != null && !result.equals("")){
+                // RULE HIT
+                break;
+            }
         }
         return result;
     }

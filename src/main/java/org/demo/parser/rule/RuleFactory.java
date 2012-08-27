@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RuleFactory {
-    private Map<String, IRule> ruleObjectMap;
+    private Map<String, Class> ruleObjectMap;
     private byte initialized = 0;
 
     public RuleFactory(Map<String, String> configs) {
-        ruleObjectMap = new HashMap<String, IRule>();
+        ruleObjectMap = new HashMap<String, Class>();
         load(configs);
     }
 
@@ -24,8 +24,8 @@ public class RuleFactory {
             try{
                 Class klass = Class.forName(fqcn);
                 Object rule = klass.newInstance();
-                if(rule instanceof IRule){
-                    ruleObjectMap.put(type, (IRule) rule);
+                if(rule instanceof IRule){ // validate if the class is of IRule type. Add only if so!
+                    ruleObjectMap.put(type, klass);
                     atleastOne = true;
                 }else{
                     initialized = 1;
@@ -57,6 +57,6 @@ public class RuleFactory {
         if(initialized == 0){
             throw new Exception("Rule factory not initialized yet");
         }
-        return ruleObjectMap.get(ruleType);
+        return (IRule) ruleObjectMap.get(ruleType).newInstance();
     }
 }

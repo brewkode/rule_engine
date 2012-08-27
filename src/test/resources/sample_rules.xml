@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleconfig>
+    <!--
+        Entity is a way to group rules based on data sources
+        For all purposes now, we can consider data sources to be urls
+        Wildcards are supported.
+        * - matches all.
+        flipkart.com/* - matches all urls that start with flipkart.com/<anything>
+        flipkart.com/ - matches only one url which is "flipkart.com/"
+
+        This rule definition schema was defined with information region extraction and attribute extraction in mind
+        It does not seem to natively lend itself to other systems that may need rule based processing.
+    -->
+    <entity pattern="*">
+        <target name="sleeveStyle">
+            <!--
+                <rules> is a way to allow the system to run a sequence of rules to extract a final result
+                repeating <rules> is way for the system to allow the system to extract the necessary information
+                 by way of trying one of the many repeated <rules>. It can be visualized as a Short circuit OR
+                 operation across <rules>. Once one <rules> returns a non-empty result, we consider it as a rule hit
+                 and return that response
+            -->
+            <rules>
+                <rule type="regex" group_num="1"> <![CDATA[(([A-Za-z]+)\s+sleeve)\s+.*]]> </rule>
+            </rules>
+            <rules>
+                <rule type="regex" group_num="1"> <![CDATA[.*\s+(sleeveless)\s+.*]]> </rule>
+            </rules>
+        </target>
+    </entity>
+</ruleconfig>

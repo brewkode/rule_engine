@@ -3,6 +3,11 @@ package org.demo.parser.util;
 import java.util.Map;
 import java.util.TreeMap;
 
+/*
+    Tree node that uses a map to store its child elements.
+    A more optimal way would be to store the elements in an array
+    and keep resizing them
+ */
 public class TreeNode {
     private char key;
     private boolean isDataNode;
@@ -62,6 +67,10 @@ public class TreeNode {
     public void setData(Object data) {
         this.data = data;
         setDataNode(true);
+    }
+
+    public boolean hasData(){
+        return data != null;
     }
 
     public void addChild(TreeNode node){
