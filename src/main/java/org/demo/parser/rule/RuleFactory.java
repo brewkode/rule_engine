@@ -24,12 +24,12 @@ public class RuleFactory {
             try{
                 Class klass = Class.forName(fqcn);
                 Object rule = klass.newInstance();
-                if(rule instanceof IRule){ // validate if the class is of IRule type. Add only if so!
+                if(rule instanceof IRule){ // validate if the class is of IRule type. If true, Add to map.
                     ruleObjectMap.put(type, klass);
                     atleastOne = true;
                 }else{
-                    initialized = 1;
-                    throw new Exception(rule.getClass()+" does not implement "+IRule.class.getCanonicalName()+" interface");
+                    initialized |= 1;
+                    System.out.println(rule.getClass()+" does not implement "+IRule.class.getCanonicalName()+" interface");
                 }
             }catch(Exception e){
                 System.out.println("Error occurred => "+e.getMessage());

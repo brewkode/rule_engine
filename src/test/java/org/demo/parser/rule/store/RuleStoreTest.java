@@ -5,6 +5,9 @@ import org.demo.parser.rule.model.Entity;
 import org.demo.parser.rule.model.RuleSet;
 import org.junit.Test;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 public class RuleStoreTest {
 
     @Test
@@ -27,5 +30,8 @@ public class RuleStoreTest {
         ruleStore.addEntity(entity);
 
 
+        assertThat(ruleStore.hasRule("flipkart.com/"), is(true));
+        assertThat(ruleStore.hasRule("flipkart.com/abc"), is(true));
+        assertThat(ruleStore.hasRule("flipkart.com/abc", true), is(false));
     }
 }

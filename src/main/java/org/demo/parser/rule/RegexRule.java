@@ -9,25 +9,23 @@ public class RegexRule implements IRule {
     private String regex = null;
     private String groupName = null;
     private int groupNumber = 0;
-           
-    
+
     @Override
     public String fire(String inputContent, String[] args) throws Exception{
         validateRegexRuleArgs(args);
-        String regex = args[0];
-        String outGrp = args[1];
-        int outGroup = Integer.parseInt(outGrp);
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(inputContent);
-        if(matcher.find()){
-            return matcher.group(outGroup).trim();
-        }
-        return null;
+        regex = args[0];
+        groupNumber = Integer.parseInt(args[1]);
+        return matchAndReturn(inputContent);
     }
 
     @Override
     public String fire(String inputContent) throws Exception{
         validate();
+        return matchAndReturn(inputContent);
+    }
+
+
+    private String matchAndReturn(String inputContent){
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(inputContent);
         if(matcher.find()){
@@ -73,4 +71,5 @@ public class RegexRule implements IRule {
     public void setGroupNumber(int groupNumber) {
         this.groupNumber = groupNumber;
     }
+
 }
